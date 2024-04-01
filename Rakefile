@@ -2,7 +2,6 @@
 
 begin
   require 'rubygems'
-  reguire 'rack'
   require 'github_changelog_generator/task'
 rescue LoadError
   # github_changelog_generator isn't available, so we won't define a rake task with it

@@ -100,6 +100,7 @@ ARG vcs_ref
 ARG build_date
 ARG build_type
 ARG LOGDIR
+ARG UBUNTU_CODENAME
 
 ENV PUPPET_DEB=puppet${PUPPET_RELEASE}-release-${UBUNTU_CODENAME}.deb
 ADD https://apt.puppet.com/${PUPPET_DEB} /${PUPPET_DEB}

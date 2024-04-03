@@ -114,6 +114,7 @@ RUN dpkg -i /${PUPPET_DEB} && \
     rm -rf /var/lib/apt/lists/* && \
     mkdir -p "$LOGDIR" && \
     chown puppetdb:puppetdb "$LOGDIR" && \
+    chgrp -R 0 /docker-entrypoint.sh /docker-entrypoint.d && \
 # We want to use the HOCON database.conf and config.conf files, so get rid
 # of the packaged files
     rm -f /etc/puppetlabs/puppetdb/conf.d/database.ini && \
